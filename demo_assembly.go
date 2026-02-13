@@ -26,8 +26,8 @@ func main() {
 }
 
 func addSimpleWebUI(serverConfig *config.Config) {
-	conf := basicwebui.NewWebRenderPluginConfig()
-	serverConfig.AddPlugin(basicwebui.NewWebRenderPlugin(conf), config.PluginConfig{
+	conf := basicwebui.NewPluginConfig()
+	serverConfig.AddPlugin(basicwebui.NewPlugin(conf), config.PluginConfig{
 		//ContentPathOverride: localProjectRoot + "/plugins/webrender/content",
 	})
 }
