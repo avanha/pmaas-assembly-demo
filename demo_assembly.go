@@ -6,6 +6,7 @@ import (
 	"github.com/avanha/pmaas-core"
 	"github.com/avanha/pmaas-core/config"
 	basicwebui "github.com/avanha/pmaas-plugin-basicwebui"
+	gotexttemplate "github.com/avanha/pmaas-plugin-gotexttemplate"
 )
 
 func main() {
@@ -13,7 +14,7 @@ func main() {
 	conf := config.NewConfig()
 	conf.HttpPort = 8090
 
-	addSimpleWebUI(conf)
+	addBasicWebUI(conf)
 
 	var pmaas = core.NewPMAAS(conf)
 	err := pmaas.Run()
@@ -25,7 +26,10 @@ func main() {
 	fmt.Printf("Demo PMAAS assembly terminated\n")
 }
 
-func addSimpleWebUI(serverConfig *config.Config) {
+func addBasicWebUI(serverConfig *config.Config) {
+	templateEngineConfig := gotexttemplate.NewGoLangTextTemplatePluginConfig()
+	serverConfig.AddPlugin(gotexttemplate.NewGoLangTextTemplatePlugin(templateEngineConfig), config.PluginConfig{})
+
 	conf := basicwebui.NewPluginConfig()
 	serverConfig.AddPlugin(basicwebui.NewPlugin(conf), config.PluginConfig{
 		//ContentPathOverride: localProjectRoot + "/plugins/webrender/content",

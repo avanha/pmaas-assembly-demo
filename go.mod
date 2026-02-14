@@ -7,4 +7,7 @@ require (
 	github.com/avanha/pmaas-plugin-basicwebui v0.0.1
 )
 
-require github.com/avanha/pmaas-spi v0.0.0 // indirect
+require (
+	github.com/avanha/pmaas-plugin-gotexttemplate v0.0.2 // indirect
+	github.com/avanha/pmaas-spi v0.0.0 // indirect
+)
