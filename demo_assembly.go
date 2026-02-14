@@ -7,6 +7,8 @@ import (
 	"github.com/avanha/pmaas-core/config"
 	basicwebui "github.com/avanha/pmaas-plugin-basicwebui"
 	gotexttemplate "github.com/avanha/pmaas-plugin-gotexttemplate"
+	netmon "github.com/avanha/pmaas-plugin-netmon"
+	netmonconfig "github.com/avanha/pmaas-plugin-netmon/config"
 )
 
 func main() {
@@ -15,6 +17,7 @@ func main() {
 	conf.HttpPort = 8090
 
 	addBasicWebUI(conf)
+	addNetmon(conf)
 
 	var pmaas = core.NewPMAAS(conf)
 	err := pmaas.Run()
@@ -33,5 +36,12 @@ func addBasicWebUI(serverConfig *config.Config) {
 	conf := basicwebui.NewPluginConfig()
 	serverConfig.AddPlugin(basicwebui.NewPlugin(conf), config.PluginConfig{
 		//ContentPathOverride: localProjectRoot + "/plugins/webrender/content",
+	})
+}
+
+func addNetmon(serverConfig *config.Config) {
+	conf := netmonconfig.NewPluginConfig()
+	serverConfig.AddPlugin(netmon.NewPlugin(conf), config.PluginConfig{
+		//ContentPathOverride: localProjectRoot + "/plugins/netmon/internal/http/content",
 	})
 }

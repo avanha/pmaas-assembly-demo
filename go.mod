@@ -9,5 +9,7 @@ require (
 
 require (
 	github.com/avanha/pmaas-plugin-gotexttemplate v0.0.2 // indirect
+	github.com/avanha/pmaas-plugin-netmon v0.0.0 // indirect
 	github.com/avanha/pmaas-spi v0.0.0 // indirect
+	github.com/gosnmp/gosnmp v1.42.1 // indirect
 )
