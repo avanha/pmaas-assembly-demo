@@ -12,6 +12,8 @@ import (
 	gotexttemplate "github.com/avanha/pmaas-plugin-gotexttemplate"
 	netmon "github.com/avanha/pmaas-plugin-netmon"
 	netmonconfig "github.com/avanha/pmaas-plugin-netmon/config"
+	porkbun "github.com/avanha/pmaas-plugin-porkbun"
+	porkbunconfig "github.com/avanha/pmaas-plugin-porkbun/config"
 )
 
 func main() {
@@ -23,6 +25,7 @@ func main() {
 	addDbLog(conf)
 	addNetmon(conf)
 	addEnvironment(conf)
+	addPorkBun(conf)
 
 	var pmaas = core.NewPMAAS(conf)
 	err := pmaas.Run()
@@ -64,5 +67,17 @@ func addEnvironment(serverConfig *config.Config) {
 	environmentConfig := environment.NewPluginConfig()
 	serverConfig.AddPlugin(environment.NewPlugin(environmentConfig), config.PluginConfig{
 		//ContentPathOverride: srcRoot + "/plugins/environment/content",
+	})
+}
+
+func addPorkBun(serverConfig *config.Config) {
+	conf := porkbunconfig.NewPluginConfig()
+	conf.ApiKey = "porkbunApiKey"
+	conf.ApiSecret = "porkbunApiSecret"
+	//exampledotcom := conf.AddDomain("example.com")
+	//hostDnsARecord := exampledotcom.AddDnsRecord("A", "host")
+	//hostDnsAAAARecord := exampledotcom.AddDnsRecord("AAAA", "host")
+	serverConfig.AddPlugin(porkbun.NewPlugin(conf), config.PluginConfig{
+		//ContentPathOverride: localProjectRoot + "/plugins/porkbun/internal/http/content",
 	})
 }
