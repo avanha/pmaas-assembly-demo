@@ -66,7 +66,10 @@ func addBluetooth(coreConfig *config.Config) {
 func addDbLog(serverConfig *config.Config) {
 	conf := dblogconfig.NewPluginConfig()
 	conf.DriverName = "postgres"
-	conf.DataSourceName = localDataSource
+	// This is how you define a data source.
+	conf.DataSourceName = fmt.Sprintf(
+		"host=%s port=%d user=%s password=%s dbname=%s sslmode=disable",
+		"localhost", 5432, "pmaas_user", "pmaas_user_password", "pmaas_db")
 	serverConfig.AddPlugin(dblog.NewPlugin(conf), config.PluginConfig{
 		//ContentPathOverride: localProjectRoot + "/plugins/dblog/internal/http/content",
 	})
