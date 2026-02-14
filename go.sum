@@ -1,3 +1,5 @@
+github.com/DATA-DOG/go-sqlmock v1.5.2 h1:OcvFkGmslmlZibjAjaHm3L//6LiuBgolP7OputlJIzU=
+github.com/DATA-DOG/go-sqlmock v1.5.2/go.mod h1:88MAG/4G7SMwSE3CeA0ZKzrT5CiOU3OJ+JlNzwDqpNU=
 github.com/avanha/pmaas-common v0.0.0 h1:k/Lk2NSM3hWcXSzIQmfmHWK4l8xjzfLfWvzvo1VOvy0=
 github.com/avanha/pmaas-common v0.0.0/go.mod h1:iXs+fTxo7N0fEXuhYrsWYkUPnZKhl5t2kwPSRa3D6kY=
 github.com/avanha/pmaas-core v0.0.1 h1:XGqeuJFrUIZvvO/Vv7+4ZwV+a9Qq1ezsOqgrfkuURdc=
@@ -6,6 +8,8 @@ github.com/avanha/pmaas-plugin-basicwebui v0.0.1 h1:rU8HPdoRsLHY/QYOVInThAb5Yjz+
 github.com/avanha/pmaas-plugin-basicwebui v0.0.1/go.mod h1:o1xX035K+oSXwnceFKxIuniLBsJ+bUzCSReOd+vh2no=
 github.com/avanha/pmaas-plugin-dblog v0.0.0 h1:dek5x9y/V8RV+o8plqoijhs916srdsFPQrl2CeUa6IM=
 github.com/avanha/pmaas-plugin-dblog v0.0.0/go.mod h1:IMPMbKAbcUScPmATpEKDu0m6H3R0c6PyOOpeDzUML74=
+github.com/avanha/pmaas-plugin-environment v0.0.0 h1:j0WCw1MXePVm2rnlniwVUKdkLhCpyO+GDJpdRyYXpRo=
+github.com/avanha/pmaas-plugin-environment v0.0.0/go.mod h1:6MasQNKiZstDH2+lkDVUAjFrYx2WCKET4sZa6R7wClM=
 github.com/avanha/pmaas-plugin-gotexttemplate v0.0.2 h1:Y0CtVt9u869gbzbb/UCXDN6uD3Nfg/yIeSY1JTcaV38=
 github.com/avanha/pmaas-plugin-gotexttemplate v0.0.2/go.mod h1:BAoB0T7QSFedruZrAW5OB4URvos0jN6ZAOnMq5nYlo4=
 github.com/avanha/pmaas-plugin-netmon v0.0.1 h1:Wm2D8tCytiysOC+HWcgoXC8RR5k298sC+STbmiM7uM0=

@@ -8,6 +8,7 @@ import (
 	basicwebui "github.com/avanha/pmaas-plugin-basicwebui"
 	dblog "github.com/avanha/pmaas-plugin-dblog"
 	dblogconfig "github.com/avanha/pmaas-plugin-dblog/config"
+	environment "github.com/avanha/pmaas-plugin-environment"
 	gotexttemplate "github.com/avanha/pmaas-plugin-gotexttemplate"
 	netmon "github.com/avanha/pmaas-plugin-netmon"
 	netmonconfig "github.com/avanha/pmaas-plugin-netmon/config"
@@ -21,6 +22,7 @@ func main() {
 	addBasicWebUI(conf)
 	addDbLog(conf)
 	addNetmon(conf)
+	addEnvironment(conf)
 
 	var pmaas = core.NewPMAAS(conf)
 	err := pmaas.Run()
@@ -55,5 +57,12 @@ func addNetmon(serverConfig *config.Config) {
 	conf := netmonconfig.NewPluginConfig()
 	serverConfig.AddPlugin(netmon.NewPlugin(conf), config.PluginConfig{
 		//ContentPathOverride: localProjectRoot + "/plugins/netmon/internal/http/content",
+	})
+}
+
+func addEnvironment(serverConfig *config.Config) {
+	environmentConfig := environment.NewPluginConfig()
+	serverConfig.AddPlugin(environment.NewPlugin(environmentConfig), config.PluginConfig{
+		//ContentPathOverride: srcRoot + "/plugins/environment/content",
 	})
 }
