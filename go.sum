@@ -6,8 +6,8 @@ github.com/avanha/pmaas-core v0.0.1 h1:XGqeuJFrUIZvvO/Vv7+4ZwV+a9Qq1ezsOqgrfkuUR
 github.com/avanha/pmaas-core v0.0.1/go.mod h1:mM/uNEeMJkJLADQKoTBfLAJMlfnT/LrBHtgJEKAeXMo=
 github.com/avanha/pmaas-plugin-basicwebui v0.0.1 h1:rU8HPdoRsLHY/QYOVInThAb5Yjz+PylrEvv6KKHrvNo=
 github.com/avanha/pmaas-plugin-basicwebui v0.0.1/go.mod h1:o1xX035K+oSXwnceFKxIuniLBsJ+bUzCSReOd+vh2no=
-github.com/avanha/pmaas-plugin-bluetooth v0.0.0 h1:JoIwsKL/3noJmawLIi8HCM4YkzkD7Ko0WYvwr40wteY=
-github.com/avanha/pmaas-plugin-bluetooth v0.0.0/go.mod h1:0Qsf8LXbVWD/tvZZ4Sn4gaKtiiMVOCZLgoMgOE2hhFQ=
+github.com/avanha/pmaas-plugin-bluetooth v0.0.1 h1:hZGELoPqAbVrts1nPayZAyAQXWvbeCr3esCcZRD2rbk=
+github.com/avanha/pmaas-plugin-bluetooth v0.0.1/go.mod h1:0Qsf8LXbVWD/tvZZ4Sn4gaKtiiMVOCZLgoMgOE2hhFQ=
 github.com/avanha/pmaas-plugin-dblog v0.0.0 h1:dek5x9y/V8RV+o8plqoijhs916srdsFPQrl2CeUa6IM=
 github.com/avanha/pmaas-plugin-dblog v0.0.0/go.mod h1:IMPMbKAbcUScPmATpEKDu0m6H3R0c6PyOOpeDzUML74=
 github.com/avanha/pmaas-plugin-environment v0.0.0 h1:j0WCw1MXePVm2rnlniwVUKdkLhCpyO+GDJpdRyYXpRo=

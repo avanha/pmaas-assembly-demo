@@ -55,10 +55,10 @@ func addBasicWebUI(serverConfig *config.Config) {
 }
 
 func addBluetooth(coreConfig *config.Config) {
-	conf := bluetooth.NewBluetoothPluginConfig()
+	conf := bluetooth.NewPluginConfig()
 	conf.EnableTestDevices = true
 	conf.AddThermometer("A4:C1:38:A1:B2:C3", "Basement")
-	coreConfig.AddPlugin(bluetooth.NewBluetoothPlugin(conf), config.PluginConfig{
+	coreConfig.AddPlugin(bluetooth.NewPlugin(conf), config.PluginConfig{
 		//ContentPathOverride: localProjectRoot + "/plugins/bluetooth/content",
 	})
 }
