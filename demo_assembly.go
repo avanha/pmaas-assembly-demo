@@ -6,6 +6,8 @@ import (
 	"github.com/avanha/pmaas-core"
 	"github.com/avanha/pmaas-core/config"
 	basicwebui "github.com/avanha/pmaas-plugin-basicwebui"
+	dblog "github.com/avanha/pmaas-plugin-dblog"
+	dblogconfig "github.com/avanha/pmaas-plugin-dblog/config"
 	gotexttemplate "github.com/avanha/pmaas-plugin-gotexttemplate"
 	netmon "github.com/avanha/pmaas-plugin-netmon"
 	netmonconfig "github.com/avanha/pmaas-plugin-netmon/config"
@@ -17,6 +19,7 @@ func main() {
 	conf.HttpPort = 8090
 
 	addBasicWebUI(conf)
+	addDbLog(conf)
 	addNetmon(conf)
 
 	var pmaas = core.NewPMAAS(conf)
@@ -36,6 +39,15 @@ func addBasicWebUI(serverConfig *config.Config) {
 	conf := basicwebui.NewPluginConfig()
 	serverConfig.AddPlugin(basicwebui.NewPlugin(conf), config.PluginConfig{
 		//ContentPathOverride: localProjectRoot + "/plugins/webrender/content",
+	})
+}
+
+func addDbLog(serverConfig *config.Config) {
+	conf := dblogconfig.NewPluginConfig()
+	conf.DriverName = "postgres"
+	conf.DataSourceName = localDataSource
+	serverConfig.AddPlugin(dblog.NewPlugin(conf), config.PluginConfig{
+		//ContentPathOverride: localProjectRoot + "/plugins/dblog/internal/http/content",
 	})
 }
 

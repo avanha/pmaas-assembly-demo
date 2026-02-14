@@ -11,6 +11,8 @@ require (
 
 require (
 	github.com/avanha/pmaas-common v0.0.0 // indirect
+	github.com/avanha/pmaas-plugin-dblog v0.0.0 // indirect
 	github.com/avanha/pmaas-spi v0.0.0 // indirect
 	github.com/gosnmp/gosnmp v1.42.1 // indirect
+	github.com/lib/pq v1.10.9 // indirect
 )
