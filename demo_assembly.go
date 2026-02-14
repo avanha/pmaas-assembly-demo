@@ -2,10 +2,12 @@ package main
 
 import (
 	"fmt"
+	"runtime"
 
 	"github.com/avanha/pmaas-core"
 	"github.com/avanha/pmaas-core/config"
 	basicwebui "github.com/avanha/pmaas-plugin-basicwebui"
+	bluetooth "github.com/avanha/pmaas-plugin-bluetooth"
 	dblog "github.com/avanha/pmaas-plugin-dblog"
 	dblogconfig "github.com/avanha/pmaas-plugin-dblog/config"
 	environment "github.com/avanha/pmaas-plugin-environment"
@@ -27,6 +29,11 @@ func main() {
 	addEnvironment(conf)
 	addPorkBun(conf)
 
+	if runtime.GOOS == "linux" {
+		// The server will run on MacOS, but the scanner will continue to fail
+		addBluetooth(conf)
+	}
+
 	var pmaas = core.NewPMAAS(conf)
 	err := pmaas.Run()
 
@@ -44,6 +51,15 @@ func addBasicWebUI(serverConfig *config.Config) {
 	conf := basicwebui.NewPluginConfig()
 	serverConfig.AddPlugin(basicwebui.NewPlugin(conf), config.PluginConfig{
 		//ContentPathOverride: localProjectRoot + "/plugins/webrender/content",
+	})
+}
+
+func addBluetooth(coreConfig *config.Config) {
+	conf := bluetooth.NewBluetoothPluginConfig()
+	conf.EnableTestDevices = true
+	conf.AddThermometer("A4:C1:38:A1:B2:C3", "Basement")
+	coreConfig.AddPlugin(bluetooth.NewBluetoothPlugin(conf), config.PluginConfig{
+		//ContentPathOverride: localProjectRoot + "/plugins/bluetooth/content",
 	})
 }
 
