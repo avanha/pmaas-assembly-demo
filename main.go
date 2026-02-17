@@ -9,7 +9,6 @@ import (
 	basicwebui "github.com/avanha/pmaas-plugin-basicwebui"
 	bluetooth "github.com/avanha/pmaas-plugin-bluetooth"
 	dblog "github.com/avanha/pmaas-plugin-dblog"
-	dblogconfig "github.com/avanha/pmaas-plugin-dblog/config"
 	environment "github.com/avanha/pmaas-plugin-environment"
 	gotexttemplate "github.com/avanha/pmaas-plugin-gotexttemplate"
 	netmon "github.com/avanha/pmaas-plugin-netmon"
@@ -45,8 +44,8 @@ func main() {
 }
 
 func addBasicWebUI(serverConfig *config.Config) {
-	templateEngineConfig := gotexttemplate.NewGoLangTextTemplatePluginConfig()
-	serverConfig.AddPlugin(gotexttemplate.NewGoLangTextTemplatePlugin(templateEngineConfig), config.PluginConfig{})
+	templateEngineConfig := gotexttemplate.NewPluginConfig()
+	serverConfig.AddPlugin(gotexttemplate.NewPlugin(templateEngineConfig), config.PluginConfig{})
 
 	conf := basicwebui.NewPluginConfig()
 	serverConfig.AddPlugin(basicwebui.NewPlugin(conf), config.PluginConfig{
@@ -64,7 +63,7 @@ func addBluetooth(coreConfig *config.Config) {
 }
 
 func addDbLog(serverConfig *config.Config) {
-	conf := dblogconfig.NewPluginConfig()
+	conf := dblog.NewPluginConfig()
 	conf.DriverName = "postgres"
 	// This is how you define a data source.
 	conf.DataSourceName = fmt.Sprintf(
