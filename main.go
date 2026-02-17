@@ -13,7 +13,6 @@ import (
 	gotexttemplate "github.com/avanha/pmaas-plugin-gotexttemplate"
 	netmon "github.com/avanha/pmaas-plugin-netmon"
 	porkbun "github.com/avanha/pmaas-plugin-porkbun"
-	porkbunconfig "github.com/avanha/pmaas-plugin-porkbun/config"
 )
 
 func main() {
@@ -88,7 +87,7 @@ func addEnvironment(serverConfig *config.Config) {
 }
 
 func addPorkBun(serverConfig *config.Config) {
-	conf := porkbunconfig.NewPluginConfig()
+	conf := porkbun.NewPluginConfig()
 	conf.ApiKey = "porkbunApiKey"
 	conf.ApiSecret = "porkbunApiSecret"
 	//exampledotcom := conf.AddDomain("example.com")

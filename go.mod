@@ -10,7 +10,7 @@ require (
 	github.com/avanha/pmaas-plugin-environment v0.0.0
 	github.com/avanha/pmaas-plugin-gotexttemplate v0.0.3
 	github.com/avanha/pmaas-plugin-netmon v0.0.2
-	github.com/avanha/pmaas-plugin-porkbun v0.0.1
+	github.com/avanha/pmaas-plugin-porkbun v0.0.2
 )
 
 require (
