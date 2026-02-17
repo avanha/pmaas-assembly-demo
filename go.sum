@@ -14,8 +14,8 @@ github.com/avanha/pmaas-plugin-environment v0.0.0 h1:j0WCw1MXePVm2rnlniwVUKdkLhC
 github.com/avanha/pmaas-plugin-environment v0.0.0/go.mod h1:6MasQNKiZstDH2+lkDVUAjFrYx2WCKET4sZa6R7wClM=
 github.com/avanha/pmaas-plugin-gotexttemplate v0.0.3 h1:Wytb6GmmytJhGthiJYs7KqzuL7buOgL8m/47ZjF3y4g=
 github.com/avanha/pmaas-plugin-gotexttemplate v0.0.3/go.mod h1:BAoB0T7QSFedruZrAW5OB4URvos0jN6ZAOnMq5nYlo4=
-github.com/avanha/pmaas-plugin-netmon v0.0.1 h1:Wm2D8tCytiysOC+HWcgoXC8RR5k298sC+STbmiM7uM0=
-github.com/avanha/pmaas-plugin-netmon v0.0.1/go.mod h1:EDNhv/VJK8msWior6xCAfJ6yU2p9osPooQNB/+5H9AQ=
+github.com/avanha/pmaas-plugin-netmon v0.0.2 h1:hqAq3ijeVquQiIiphRF1b5IOY+RviSx3gpDNh4b9jgk=
+github.com/avanha/pmaas-plugin-netmon v0.0.2/go.mod h1:EDNhv/VJK8msWior6xCAfJ6yU2p9osPooQNB/+5H9AQ=
 github.com/avanha/pmaas-plugin-porkbun v0.0.1 h1:qP07TONhuRRa89nx44aVilz/3e7PQBYF/iloVFZSfdQ=
 github.com/avanha/pmaas-plugin-porkbun v0.0.1/go.mod h1:gNqLfMrBDsorq8uGGezO3LgRnf4ue+uAILTk16V+07g=
 github.com/avanha/pmaas-spi v0.0.0 h1:rSvj+oNKFkKpqpaaQr7OXVuzbiPHaxmOSAsR4/tW7fo=
@@ -67,8 +67,8 @@ golang.org/x/sys v0.0.0-20190412213103-97732733099d/go.mod h1:h1NjWce9XRLGQEsW7w
 golang.org/x/sys v0.0.0-20190422165155-953cdadca894/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/sys v0.0.0-20200323222414-85ca7c5b95cd/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/sys v0.0.0-20200728102440-3e129f6d46b1/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
-golang.org/x/sys v0.41.0 h1:Ivj+2Cp/ylzLiEU89QhWblYnOE9zerudt9Ftecq2C6k=
-golang.org/x/sys v0.41.0/go.mod h1:OgkHotnGiDImocRcuBABYBEXf8A9a87e/uXjp9XT3ks=
+golang.org/x/sys v0.40.0 h1:DBZZqJ2Rkml6QMQsZywtnjnnGvHza6BTfYFWY9kjEWQ=
+golang.org/x/sys v0.40.0/go.mod h1:OgkHotnGiDImocRcuBABYBEXf8A9a87e/uXjp9XT3ks=
 golang.org/x/text v0.3.0/go.mod h1:NqM8EUOU14njkJ3fqMW+pc6Ldnwhi/IjpwHt7yyuwOQ=
 golang.org/x/tools v0.0.0-20191119224855-298f0cb1881e/go.mod h1:b+2E5dAYhXwXZwtnZ6UAqBI28+e2cm9otk0dWdXHAEo=
 golang.org/x/tools v0.0.0-20200925191224-5d1fdd8fa346/go.mod h1:z6u4i615ZeAfBE4XtMziQW1fSVJXACjjbWkB/mvPzlU=

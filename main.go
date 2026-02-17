@@ -12,7 +12,6 @@ import (
 	environment "github.com/avanha/pmaas-plugin-environment"
 	gotexttemplate "github.com/avanha/pmaas-plugin-gotexttemplate"
 	netmon "github.com/avanha/pmaas-plugin-netmon"
-	netmonconfig "github.com/avanha/pmaas-plugin-netmon/config"
 	porkbun "github.com/avanha/pmaas-plugin-porkbun"
 	porkbunconfig "github.com/avanha/pmaas-plugin-porkbun/config"
 )
@@ -75,7 +74,7 @@ func addDbLog(serverConfig *config.Config) {
 }
 
 func addNetmon(serverConfig *config.Config) {
-	conf := netmonconfig.NewPluginConfig()
+	conf := netmon.NewPluginConfig()
 	serverConfig.AddPlugin(netmon.NewPlugin(conf), config.PluginConfig{
 		//ContentPathOverride: localProjectRoot + "/plugins/netmon/internal/http/content",
 	})
