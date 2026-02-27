@@ -19,9 +19,13 @@ require (
 	github.com/avanha/pmaas-spi v0.0.2 // indirect
 	github.com/fatih/structs v1.1.0 // indirect
 	github.com/godbus/dbus/v5 v5.2.2 // indirect
+	github.com/google/uuid v1.6.0 // indirect
 	github.com/gosnmp/gosnmp v1.43.2 // indirect
 	github.com/lib/pq v1.11.2 // indirect
 	github.com/muka/go-bluetooth v0.0.0-20240701044517-04c4f09c514e // indirect
+	github.com/prometheus-community/pro-bing v0.8.0 // indirect
 	github.com/sirupsen/logrus v1.9.4 // indirect
+	golang.org/x/net v0.50.0 // indirect
+	golang.org/x/sync v0.19.0 // indirect
 	golang.org/x/sys v0.41.0 // indirect
 )
