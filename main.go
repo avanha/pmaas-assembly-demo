@@ -11,6 +11,7 @@ import (
 	dblog "github.com/avanha/pmaas-plugin-dblog"
 	environment "github.com/avanha/pmaas-plugin-environment"
 	gotexttemplate "github.com/avanha/pmaas-plugin-gotexttemplate"
+	tunnelbroker "github.com/avanha/pmaas-plugin-hetunnelbroker"
 	netmon "github.com/avanha/pmaas-plugin-netmon"
 	porkbun "github.com/avanha/pmaas-plugin-porkbun"
 )
@@ -25,6 +26,7 @@ func main() {
 	addNetmon(conf)
 	addEnvironment(conf)
 	addPorkBun(conf)
+	addHeTunnelBroker(conf)
 
 	if runtime.GOOS == "linux" {
 		// The server will run on MacOS, but the scanner will continue to fail
@@ -96,4 +98,9 @@ func addPorkBun(serverConfig *config.Config) {
 	serverConfig.AddPlugin(porkbun.NewPlugin(conf), config.PluginConfig{
 		//ContentPathOverride: localProjectRoot + "/plugins/porkbun/internal/http/content",
 	})
+}
+
+func addHeTunnelBroker(serverConfig *config.Config) {
+	conf := tunnelbroker.NewPluginConfig()
+	serverConfig.AddPlugin(tunnelbroker.NewPlugin(conf), config.PluginConfig{})
 }
