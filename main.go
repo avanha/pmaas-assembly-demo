@@ -1,9 +1,12 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
+	"net"
 	"runtime"
 
+	pmaasnet "github.com/avanha/pmaas-common/net"
 	"github.com/avanha/pmaas-core"
 	"github.com/avanha/pmaas-core/config"
 	basicwebui "github.com/avanha/pmaas-plugin-basicwebui"
@@ -12,9 +15,16 @@ import (
 	environment "github.com/avanha/pmaas-plugin-environment"
 	gotexttemplate "github.com/avanha/pmaas-plugin-gotexttemplate"
 	tunnelbroker "github.com/avanha/pmaas-plugin-hetunnelbroker"
+	tunnelbrokerconfig "github.com/avanha/pmaas-plugin-hetunnelbroker/config"
 	netmon "github.com/avanha/pmaas-plugin-netmon"
+	"github.com/avanha/pmaas-plugin-netmon/events"
 	porkbun "github.com/avanha/pmaas-plugin-porkbun"
+	config2 "github.com/avanha/pmaas-plugin-porkbun/config"
 )
+
+var currentWanIp net.IP
+var hostDnsRecord *config2.DnsRecord
+var exampleTunnel *tunnelbrokerconfig.Tunnel
 
 func main() {
 	fmt.Printf("Starting Demo PMAAS assembly\n")
@@ -76,6 +86,9 @@ func addDbLog(serverConfig *config.Config) {
 
 func addNetmon(serverConfig *config.Config) {
 	conf := netmon.NewPluginConfig()
+	//router := conf.AddHost("Home Gatatway", "10.0.0.1")
+	//routerWanInterface := router.AddNetInterfaceByName("eth0")
+	//routerWanInterface.AddOnIpAddressChangeListener(onWanIpChanged)
 	serverConfig.AddPlugin(netmon.NewPlugin(conf), config.PluginConfig{
 		//ContentPathOverride: localProjectRoot + "/plugins/netmon/internal/http/content",
 	})
@@ -93,7 +106,7 @@ func addPorkBun(serverConfig *config.Config) {
 	conf.ApiKey = "porkbunApiKey"
 	conf.ApiSecret = "porkbunApiSecret"
 	//exampledotcom := conf.AddDomain("example.com")
-	//hostDnsARecord := exampledotcom.AddDnsRecord("A", "host")
+	//hostDnsARecord = exampledotcom.AddDnsRecord("A", "host")
 	//hostDnsAAAARecord := exampledotcom.AddDnsRecord("AAAA", "host")
 	serverConfig.AddPlugin(porkbun.NewPlugin(conf), config.PluginConfig{
 		//ContentPathOverride: localProjectRoot + "/plugins/porkbun/internal/http/content",
@@ -102,5 +115,36 @@ func addPorkBun(serverConfig *config.Config) {
 
 func addHeTunnelBroker(serverConfig *config.Config) {
 	conf := tunnelbroker.NewPluginConfig()
+	// conf.Username = "heUsername"
+	// conf.UpdateKey = "heUpdateKey"
+	// exampleTunnel = conf.AddTunnel("example", "123456")
 	serverConfig.AddPlugin(tunnelbroker.NewPlugin(conf), config.PluginConfig{})
+}
+
+func onWanIpChanged(event events.HostInterfaceAddressChangeEvent) {
+	fmt.Printf("onWanIpChanged: %s -> %s\n", event.OldValue, event.NewValue)
+
+	if len(event.NewValue) > 0 {
+		ipV4Address := pmaasnet.FindFirstIpV4Address(event.NewValue)
+
+		// Support for IPv6:
+		// ipV6Address := pmaasnet.FindFirstGlobalUnicastIpV6Address(event.NewValue)
+
+		if ipV4Address != nil && !bytes.Equal(currentWanIp, ipV4Address) {
+			currentWanIp = ipV4Address
+
+			if hostDnsRecord != nil {
+				if err := hostDnsRecord.UpdateValue(ipV4Address.String()); err != nil {
+					fmt.Printf("Error updating host A DNS record: %s\n", err)
+				}
+			}
+
+			if exampleTunnel != nil {
+				if err := exampleTunnel.UpdateClientIpV4Address(ipV4Address); err != nil {
+					fmt.Printf("error updating example tunnel client IP address: %s\n", err)
+				}
+			}
+
+		}
+	}
 }
