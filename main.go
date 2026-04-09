@@ -39,7 +39,7 @@ func main() {
 	addHeTunnelBroker(conf)
 
 	if runtime.GOOS == "linux" {
-		// The server will run on MacOS, but the scanner will continue to fail
+		// The server will run on macOS, but the scanner will continue to fail
 		addBluetooth(conf)
 	}
 
@@ -86,7 +86,7 @@ func addDbLog(serverConfig *config.Config) {
 
 func addNetmon(serverConfig *config.Config) {
 	conf := netmon.NewPluginConfig()
-	//router := conf.AddHost("Home Gatatway", "10.0.0.1")
+	//router := conf.AddHost("My Gateway", "10.0.0.1")
 	//routerWanInterface := router.AddNetInterfaceByName("eth0")
 	//routerWanInterface.AddOnIpAddressChangeListener(onWanIpChanged)
 	serverConfig.AddPlugin(netmon.NewPlugin(conf), config.PluginConfig{
@@ -105,9 +105,9 @@ func addPorkBun(serverConfig *config.Config) {
 	conf := porkbun.NewPluginConfig()
 	conf.ApiKey = "porkbunApiKey"
 	conf.ApiSecret = "porkbunApiSecret"
-	//exampledotcom := conf.AddDomain("example.com")
-	//hostDnsARecord = exampledotcom.AddDnsRecord("A", "host")
-	//hostDnsAAAARecord := exampledotcom.AddDnsRecord("AAAA", "host")
+	//exampleDomain := conf.AddDomain("example.com")
+	//hostDnsARecord = exampleDomain.AddDnsRecord("A", "host")
+	//hostDnsAAAARecord := exampleDomain.AddDnsRecord("AAAA", "host")
 	serverConfig.AddPlugin(porkbun.NewPlugin(conf), config.PluginConfig{
 		//ContentPathOverride: localProjectRoot + "/plugins/porkbun/internal/http/content",
 	})
