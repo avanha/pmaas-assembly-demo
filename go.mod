@@ -4,9 +4,9 @@ go 1.27.1
 
 require (
 	github.com/avanha/pmaas-common v0.0.4
-	github.com/avanha/pmaas-core v0.0.6
+	github.com/avanha/pmaas-core v0.0.7
 	github.com/avanha/pmaas-plugin-basicwebui v0.0.4
-	github.com/avanha/pmaas-plugin-bluetooth v0.0.6
+	github.com/avanha/pmaas-plugin-bluetooth v0.0.7
 	github.com/avanha/pmaas-plugin-dblog v0.0.4
 	github.com/avanha/pmaas-plugin-environment v0.0.4
 	github.com/avanha/pmaas-plugin-gotexttemplate v0.0.5

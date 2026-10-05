@@ -2,12 +2,12 @@ github.com/DATA-DOG/go-sqlmock v1.5.2 h1:OcvFkGmslmlZibjAjaHm3L//6LiuBgolP7Oputl
 github.com/DATA-DOG/go-sqlmock v1.5.2/go.mod h1:88MAG/4G7SMwSE3CeA0ZKzrT5CiOU3OJ+JlNzwDqpNU=
 github.com/avanha/pmaas-common v0.0.4 h1:SzfEeUO21jTB88wW8kebYPa4LrCDDLq6lwBcXtObmOE=
 github.com/avanha/pmaas-common v0.0.4/go.mod h1:XkhgGSpKVnLrNbsuQLcuxzczTeMrf+FDZBhfxA+nJAY=
-github.com/avanha/pmaas-core v0.0.6 h1:d5t0H3xEblpmxC8swABPCtsO3dOv7xMZT+1k9SKpz/8=
-github.com/avanha/pmaas-core v0.0.6/go.mod h1:c1+h9usy4txtg+AME1NVAIju8l7aD1YE/ZuAQaDM5uM=
+github.com/avanha/pmaas-core v0.0.7 h1:zJB0pm0NNRPWZNDx2xHltPuYiF2kALnoVYs7lz9R8Rc=
+github.com/avanha/pmaas-core v0.0.7/go.mod h1:c1+h9usy4txtg+AME1NVAIju8l7aD1YE/ZuAQaDM5uM=
 github.com/avanha/pmaas-plugin-basicwebui v0.0.4 h1:lC2PbjE2n4yEEttTo1XyrGYaB/6nSC2g14ebPrJRdZQ=
 github.com/avanha/pmaas-plugin-basicwebui v0.0.4/go.mod h1:EKziNN3CVdpvN2GGOvuV+2HZhOl9Q+xzZ+7A2IIXJg4=
-github.com/avanha/pmaas-plugin-bluetooth v0.0.6 h1:DJsKmTFfMY+FilzTQ4fExioUIwdWpDe3IEdvaF/U/eA=
-github.com/avanha/pmaas-plugin-bluetooth v0.0.6/go.mod h1:d5SJCmNuY3HjXtWPh/l6FWjZDbeFnp+xjs15ZUv3iPk=
+github.com/avanha/pmaas-plugin-bluetooth v0.0.7 h1:jbRM0YYucN5WyeTbbzUzP6dFUCvhFiNrv1XTnvzAKso=
+github.com/avanha/pmaas-plugin-bluetooth v0.0.7/go.mod h1:d5SJCmNuY3HjXtWPh/l6FWjZDbeFnp+xjs15ZUv3iPk=
 github.com/avanha/pmaas-plugin-dblog v0.0.4 h1:UNtwQtHrjZZ4tGVq5LciJ2nY9MticnKia7Dx23WmkI8=
 github.com/avanha/pmaas-plugin-dblog v0.0.4/go.mod h1:35DA1PRgs8yTgwl5S8Dkaysm+BPe4g20chD+B0ah8Cc=
 github.com/avanha/pmaas-plugin-environment v0.0.4 h1:kzm7LmQ1j6wHHrJt2+h2CKUyg9kkbCkJeHadgV/xwig=
