@@ -14,7 +14,7 @@ import (
 
 // home is where the sun is worked out for: change it to wherever you are. Sunrise, sunset and the dusk and dawn the garage
 // door alert goes by all depend on it.
-var home = sun.Location{Latitude: 39.9967, Longitude: -105.0944}
+var home = sun.Location{Latitude: 40.7128, Longitude: -74.0060} // New York, NY
 
 // addAutomations adds the plugin that runs automations, and the demo automations over the fake devices. Add it after the
 // plugins the automations use, so that it is stopped before them.
