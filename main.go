@@ -5,10 +5,12 @@ import (
 	"fmt"
 	"net"
 	"runtime"
+	"time"
 
 	pmaasnet "github.com/avanha/pmaas-common/net"
 	"github.com/avanha/pmaas-core"
 	"github.com/avanha/pmaas-core/config"
+	alertconsole "github.com/avanha/pmaas-plugin-alertconsole"
 	basicwebui "github.com/avanha/pmaas-plugin-basicwebui"
 	bluetooth "github.com/avanha/pmaas-plugin-bluetooth"
 	dblog "github.com/avanha/pmaas-plugin-dblog"
@@ -31,8 +33,11 @@ func main() {
 	conf := config.NewConfig()
 	conf.HttpPort = 8090
 
+	addAlertConsole(conf)
 	addBasicWebUI(conf)
 	addDbLog(conf)
+	addFakes(conf)
+	addAutomations(conf)
 	addNetmon(conf)
 	addEnvironment(conf)
 	addPorkBun(conf)
@@ -51,6 +56,12 @@ func main() {
 	}
 
 	fmt.Printf("Demo PMAAS assembly terminated\n")
+}
+
+// addAlertConsole adds the page that collects alerts, and with it the indicator in every page's header. Add it first, so
+// that it is there to hear the alerts the other plugins raise.
+func addAlertConsole(serverConfig *config.Config) {
+	serverConfig.AddPlugin(alertconsole.NewPlugin(alertconsole.NewPluginConfig()), config.PluginConfig{})
 }
 
 func addBasicWebUI(serverConfig *config.Config) {
@@ -86,6 +97,11 @@ func addDbLog(serverConfig *config.Config) {
 
 func addNetmon(serverConfig *config.Config) {
 	conf := netmon.NewPluginConfig()
+
+	// A router that is only pretending: the Fakes page takes it down. Once it has been unreachable for two minutes
+	// there is a critical alert on the alert console, which clears when it is back. A real host would be
+	// conf.AddHost("My Gateway", "10.0.0.1").AlertWhenUnreachable(2*time.Minute, nil), and without the call there is no alert.
+	conf.AddHost("fake-router", "192.0.2.1").UseProber(fakeRouter).AlertWhenUnreachable(2*time.Minute, nil)
 	//router := conf.AddHost("My Gateway", "10.0.0.1")
 	//routerWanInterface := router.AddNetInterfaceByName("eth0")
 	//routerWanInterface.AddOnIpAddressChangeListener(onWanIpChanged)
