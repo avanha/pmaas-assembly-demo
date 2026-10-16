@@ -5,7 +5,7 @@ go 1.27.1
 require (
 	github.com/avanha/pmaas-common v0.0.4
 	github.com/avanha/pmaas-core v0.0.7
-	github.com/avanha/pmaas-plugin-basicwebui v0.0.5
+	github.com/avanha/pmaas-plugin-basicwebui v0.0.6
 	github.com/avanha/pmaas-plugin-bluetooth v0.0.8
 	github.com/avanha/pmaas-plugin-dblog v0.0.5
 	github.com/avanha/pmaas-plugin-environment v0.0.5
@@ -16,7 +16,7 @@ require (
 )
 
 require (
-	github.com/avanha/pmaas-spi v0.0.9 // indirect
+	github.com/avanha/pmaas-spi v0.0.12 // indirect
 	github.com/fatih/structs v1.1.0 // indirect
 	github.com/godbus/dbus/v5 v5.2.2 // indirect
 	github.com/google/uuid v1.6.0 // indirect
