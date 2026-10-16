@@ -14,8 +14,8 @@ import (
 var (
 	holidayLights            device.ISwitch
 	fakeSwitch1, fakeSwitch2 device.ISwitch
-	fakeFanSwitch            device.ISwitch
-	fakeThermometer          environment.IWirelessThermometer
+	bedroomFanSwitch         device.ISwitch
+	bedroomThermometer       environment.IWirelessThermometer
 
 	fakeAtticFanSwitch                           device.ISwitch
 	fakeAtticThermometer, fakeOutsideThermometer environment.IWirelessThermometer
@@ -36,15 +36,16 @@ func addFakes(coreConfig *config.Config) {
 	holidayLights = conf.AddSwitch("Holiday lights")
 	fakeSwitch1 = conf.AddSwitch("Fake switch 1")
 	fakeSwitch2 = conf.AddSwitch("Fake switch 2")
-	fakeFanSwitch = conf.AddSwitch("Fake Fan Switch")
-	fakeThermometer = conf.AddThermometer("Fake Thermometer")
+	bedroomFanSwitch = conf.AddSwitch("Bedroom Fan Switch")
+	bedroomThermometer = conf.AddThermometer("Bedroom Thermometer")
 	fakeAtticFanSwitch = conf.AddSwitch("Fake Attic Fan Switch")
 	fakeAtticThermometer = conf.AddThermometer("Fake Attic Thermometer")
 	fakeOutsideThermometer = conf.AddThermometer("Fake Outside Thermometer")
 
-	// A warning once the sensor has been out of touch for five minutes: a setting on the device, not an automation.
-	// With no setting there is no alert about it.
+	// Alert if the device is offline for more than 5 minutes.  There are no alerts by default.
 	fakeGarageDoor = conf.AddDoorSensor("Fake Garage Door").AlertWhenOffline(alert.WhenOffline(5*time.Minute, nil))
+
+	// The alert for fakeRouter is actually configured in the netmon plugin.  This fake host is inserted there.
 	fakeRouter = conf.AddHost("fake-router")
 
 	coreConfig.AddPlugin(fakes.NewPlugin(conf), config.PluginConfig{})

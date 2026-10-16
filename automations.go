@@ -25,13 +25,13 @@ func addAutomations(coreConfig *config.Config) {
 		"holiday-lights-on", "Turn on the holiday lights 15 minutes before sunset",
 		trigger.Sun(home, sun.Sunset, -15*time.Minute),
 		pmaasautomations.TurnOn(holidayLights),
-			))
+	))
 
 	conf.Add(pmaasautomations.New(
 		"holiday-lights-off", "Turn off the holiday lights at 12:30 AM",
 		trigger.AtTimeOfDay(0, 30),
 		pmaasautomations.TurnOff(holidayLights),
-				pmaasautomations.WithCatchUp(6*time.Hour),
+		pmaasautomations.WithCatchUp(6*time.Hour),
 	))
 
 	// Something to watch: the two fake switches flip together every five minutes, on the five. Open the Fakes page to
@@ -53,9 +53,9 @@ func addAutomations(coreConfig *config.Config) {
 		"fan-off-when-cool", "Turn off the fan after 1:00 AM once the room is below 75°F",
 		trigger.AtTimeOfDay(1, 0),
 		pmaasautomations.When(
-			pmaasautomations.TurnOff(fakeFanSwitch),
-			pmaasautomations.SwitchIs(fakeFanSwitch, device.SwitchStateOn),
-			pmaasautomations.TemperatureBelow(fakeThermometer, pmaasautomations.Fahrenheit(75), 10*time.Minute),
+			pmaasautomations.TurnOff(bedroomFanSwitch),
+			pmaasautomations.SwitchIs(bedroomFanSwitch, device.SwitchStateOn),
+			pmaasautomations.TemperatureBelow(bedroomThermometer, pmaasautomations.Fahrenheit(75), 10*time.Minute),
 		),
 		pmaasautomations.WithDescription("Waits, from 1:00 AM, for the fan to be on and the room to be cool. Does nothing from 8:00."),
 		// Due at 1:00, so this is up to 7:59.

@@ -33,15 +33,20 @@ func main() {
 	conf := config.NewConfig()
 	conf.HttpPort = 8090
 
+	// Fakes need to be created first because they are used by other plugins.
+	addFakes(conf)
+
+	// Rest of the plugins
 	addAlertConsole(conf)
 	addBasicWebUI(conf)
 	addDbLog(conf)
-	addFakes(conf)
-	addAutomations(conf)
 	addNetmon(conf)
 	addEnvironment(conf)
 	addPorkBun(conf)
 	addHeTunnelBroker(conf)
+
+	// Example automations
+	addAutomations(conf)
 
 	if runtime.GOOS == "linux" {
 		// The server will run on macOS, but the scanner will continue to fail
