@@ -10,8 +10,8 @@ github.com/avanha/pmaas-plugin-alertconsole v0.0.3 h1:RjipyhkMHC6FYqwFG50VOHaTVF
 github.com/avanha/pmaas-plugin-alertconsole v0.0.3/go.mod h1:0flgW5WMBmr7F0Wm1xiklA1eVU2t5UNdwWXb13J8AaI=
 github.com/avanha/pmaas-plugin-automations v0.0.2 h1:oj2EyxyYXMRPsVwUPZwn8fRDmFgYwIc2avqQoISdfKA=
 github.com/avanha/pmaas-plugin-automations v0.0.2/go.mod h1:TYS5WIeJi5IL9heNNaP8KhLscRqyqVz54eoeMfeYi8Y=
-github.com/avanha/pmaas-plugin-basicwebui v0.0.11 h1:ZZUMRN3RYMSO9ARTcJdvG+cbZvy82lS5V9uPtPC0qao=
-github.com/avanha/pmaas-plugin-basicwebui v0.0.11/go.mod h1:MvEA01c522A2O1ObOp7zr+Ti5jXwdZZIZ5nFf3aApgI=
+github.com/avanha/pmaas-plugin-basicwebui v0.0.12 h1:KeCjKwzRGQEwa6SAMyTCEMhGNJ+mUsXUWKMsaj14DKk=
+github.com/avanha/pmaas-plugin-basicwebui v0.0.12/go.mod h1:MvEA01c522A2O1ObOp7zr+Ti5jXwdZZIZ5nFf3aApgI=
 github.com/avanha/pmaas-plugin-bluetooth v0.0.10 h1:TCZkHdNz2wLcdmt936/mBD3lB5/WkNm/0GAxk+ewVco=
 github.com/avanha/pmaas-plugin-bluetooth v0.0.10/go.mod h1:K9liqgpbONOjNWY+8vb9RrygBoBJ1hB7XVnIrlE7GHg=
 github.com/avanha/pmaas-plugin-dblog v0.0.6 h1:USuJtPNwJLkjg+aoDkfkl/K1FuNuQVkmaCFPFOjVHF0=

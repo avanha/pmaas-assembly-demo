@@ -8,7 +8,7 @@ require (
 	github.com/avanha/pmaas-core v0.0.10
 	github.com/avanha/pmaas-plugin-alertconsole v0.0.3
 	github.com/avanha/pmaas-plugin-automations v0.0.2
-	github.com/avanha/pmaas-plugin-basicwebui v0.0.11
+	github.com/avanha/pmaas-plugin-basicwebui v0.0.12
 	github.com/avanha/pmaas-plugin-bluetooth v0.0.10
 	github.com/avanha/pmaas-plugin-dblog v0.0.6
 	github.com/avanha/pmaas-plugin-environment v0.0.7
