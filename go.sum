@@ -10,8 +10,8 @@ github.com/avanha/pmaas-plugin-alertconsole v0.0.3 h1:RjipyhkMHC6FYqwFG50VOHaTVF
 github.com/avanha/pmaas-plugin-alertconsole v0.0.3/go.mod h1:0flgW5WMBmr7F0Wm1xiklA1eVU2t5UNdwWXb13J8AaI=
 github.com/avanha/pmaas-plugin-automations v0.0.2 h1:oj2EyxyYXMRPsVwUPZwn8fRDmFgYwIc2avqQoISdfKA=
 github.com/avanha/pmaas-plugin-automations v0.0.2/go.mod h1:TYS5WIeJi5IL9heNNaP8KhLscRqyqVz54eoeMfeYi8Y=
-github.com/avanha/pmaas-plugin-basicwebui v0.0.8 h1:5bFpIBG5mQ0leeM9CCIsOcE/o9AxA/amt2tYOnAhpDk=
-github.com/avanha/pmaas-plugin-basicwebui v0.0.8/go.mod h1:G5xfxryClz4zvVNeRDkqTyRqYU1NTxyC/Fk3L7MvUSs=
+github.com/avanha/pmaas-plugin-basicwebui v0.0.9 h1:K9oFwhAO4Qi4kh1ng7U7taVk2Gao5Kbgeftdze5VdYQ=
+github.com/avanha/pmaas-plugin-basicwebui v0.0.9/go.mod h1:d6+87tqnpTPKj9s1opdUuOLg7u5/9EJp7aaOKX3ol10=
 github.com/avanha/pmaas-plugin-bluetooth v0.0.9 h1:UGfosEHu467zMP+PzrKEIf2oaBmz8uzdMHe0LYjS1Lo=
 github.com/avanha/pmaas-plugin-bluetooth v0.0.9/go.mod h1:Wi0r/J+juMdtVhf6RSww+arCHEya6JopVsGu+VKtIpA=
 github.com/avanha/pmaas-plugin-dblog v0.0.6 h1:USuJtPNwJLkjg+aoDkfkl/K1FuNuQVkmaCFPFOjVHF0=
@@ -28,8 +28,8 @@ github.com/avanha/pmaas-plugin-netmon v0.0.10 h1:Bx7aIE69OEXGbGXtIVhCpPVEnajC/Es
 github.com/avanha/pmaas-plugin-netmon v0.0.10/go.mod h1:kjthJfAJmQMeu9NyH7OUy3sokBX8CbU6sQ7q7h4t9mo=
 github.com/avanha/pmaas-plugin-porkbun v0.0.9 h1:7HIpCIRBlNgEfpdud/nYQZ1EtZgItvAf45KHi6vi6No=
 github.com/avanha/pmaas-plugin-porkbun v0.0.9/go.mod h1:IUWutRazYyarHVADbNlen8kzFIH7XI2Q2bEQjNJWLg0=
-github.com/avanha/pmaas-spi v0.0.14 h1:JIrxgl7Sc3etANISIyYPP86m/MstvG4YmnXf9PpfK28=
-github.com/avanha/pmaas-spi v0.0.14/go.mod h1:vKV8Ke5QXei42A4agIgxypbznjLqFQyi2hvqSyoe7c0=
+github.com/avanha/pmaas-spi v0.0.15 h1:nQ1ZTR0GvTdVSztyy+0sHuDEJKYJwRq+rHYtNvwDHRk=
+github.com/avanha/pmaas-spi v0.0.15/go.mod h1:vKV8Ke5QXei42A4agIgxypbznjLqFQyi2hvqSyoe7c0=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/google/uuid v1.6.0 h1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0=
