@@ -7,6 +7,7 @@ import (
 	"runtime"
 	"time"
 
+	"github.com/avanha/pmaas-bluetooth-devices"
 	pmaasnet "github.com/avanha/pmaas-common/net"
 	"github.com/avanha/pmaas-core"
 	"github.com/avanha/pmaas-core/config"
@@ -82,6 +83,7 @@ func addBasicWebUI(serverConfig *config.Config) {
 func addBluetooth(coreConfig *config.Config) {
 	conf := bluetooth.NewPluginConfig()
 	conf.EnableTestDevices = true
+	conf.Recognize(devices.All()...)
 	conf.AddThermometer("A4:C1:38:A1:B2:C3", "Basement")
 	coreConfig.AddPlugin(bluetooth.NewPlugin(conf), config.PluginConfig{
 		//ContentPathOverride: localProjectRoot + "/plugins/bluetooth/content",
