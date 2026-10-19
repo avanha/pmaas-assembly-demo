@@ -2,6 +2,8 @@ github.com/DATA-DOG/go-sqlmock v1.5.2 h1:OcvFkGmslmlZibjAjaHm3L//6LiuBgolP7Oputl
 github.com/DATA-DOG/go-sqlmock v1.5.2/go.mod h1:88MAG/4G7SMwSE3CeA0ZKzrT5CiOU3OJ+JlNzwDqpNU=
 github.com/avanha/pmaas-automations v0.0.3 h1:CRpSy7R9oORWW0JnrPWOVouTQjCHnYvFTZCYDDgFoN4=
 github.com/avanha/pmaas-automations v0.0.3/go.mod h1:CLNh4a534m5MZMcyk/MF5vZyhWpVtiUHG3RvXs6IeTU=
+github.com/avanha/pmaas-bluetooth-devices v0.0.1 h1:m+dibU0mHxNNDbrZ0ZMzHqP6HDoVpq36I0lrWFA1+xI=
+github.com/avanha/pmaas-bluetooth-devices v0.0.1/go.mod h1:3mNZrKBQgPNpN9Zazw8Bz6k3reO5iAk8c+OE8FIzWeA=
 github.com/avanha/pmaas-common v0.0.5 h1:QeTvLZ4guLM58pKqpwdCh+rStbsVXLKNRjqGy9zrSb0=
 github.com/avanha/pmaas-common v0.0.5/go.mod h1:XkhgGSpKVnLrNbsuQLcuxzczTeMrf+FDZBhfxA+nJAY=
 github.com/avanha/pmaas-core v0.0.10 h1:90JZxVc1FAmYRv7AZzhS2zGKgnBUcfdPVK8IDQw00k4=
@@ -12,8 +14,8 @@ github.com/avanha/pmaas-plugin-automations v0.0.2 h1:oj2EyxyYXMRPsVwUPZwn8fRDmFg
 github.com/avanha/pmaas-plugin-automations v0.0.2/go.mod h1:TYS5WIeJi5IL9heNNaP8KhLscRqyqVz54eoeMfeYi8Y=
 github.com/avanha/pmaas-plugin-basicwebui v0.0.12 h1:KeCjKwzRGQEwa6SAMyTCEMhGNJ+mUsXUWKMsaj14DKk=
 github.com/avanha/pmaas-plugin-basicwebui v0.0.12/go.mod h1:MvEA01c522A2O1ObOp7zr+Ti5jXwdZZIZ5nFf3aApgI=
-github.com/avanha/pmaas-plugin-bluetooth v0.0.10 h1:TCZkHdNz2wLcdmt936/mBD3lB5/WkNm/0GAxk+ewVco=
-github.com/avanha/pmaas-plugin-bluetooth v0.0.10/go.mod h1:K9liqgpbONOjNWY+8vb9RrygBoBJ1hB7XVnIrlE7GHg=
+github.com/avanha/pmaas-plugin-bluetooth v0.0.11 h1:iHFvKOj3BFAB+VNq72P1GCfRQaLI2t/YCLcd9EYFTq0=
+github.com/avanha/pmaas-plugin-bluetooth v0.0.11/go.mod h1:/ufXhMtIZpxHdIFp6jbMZyKDmVs3XpRXHDAgpOEyPwQ=
 github.com/avanha/pmaas-plugin-dblog v0.0.6 h1:USuJtPNwJLkjg+aoDkfkl/K1FuNuQVkmaCFPFOjVHF0=
 github.com/avanha/pmaas-plugin-dblog v0.0.6/go.mod h1:TFnf3uEiBknnsa37eUtfjJIjsHf+klZZhslLzaI+WvE=
 github.com/avanha/pmaas-plugin-environment v0.0.7 h1:ApeGrdOGtMQEtroTEoscdGyKx3Jk2SVpYPUpZEACSjw=
@@ -28,8 +30,8 @@ github.com/avanha/pmaas-plugin-netmon v0.0.11 h1:4NkIz3wG2aIUGanh3wWSXo4DD+qbGAl
 github.com/avanha/pmaas-plugin-netmon v0.0.11/go.mod h1:Hhs3M3fAhm7pNzajg/NyG/b6AZCtU8rE5eZlY3DyoP8=
 github.com/avanha/pmaas-plugin-porkbun v0.0.9 h1:7HIpCIRBlNgEfpdud/nYQZ1EtZgItvAf45KHi6vi6No=
 github.com/avanha/pmaas-plugin-porkbun v0.0.9/go.mod h1:IUWutRazYyarHVADbNlen8kzFIH7XI2Q2bEQjNJWLg0=
-github.com/avanha/pmaas-spi v0.0.17 h1:zpVDSwamSskA7D0yXDfrTgKJG2iECy5FdVmseH/SCus=
-github.com/avanha/pmaas-spi v0.0.17/go.mod h1:vKV8Ke5QXei42A4agIgxypbznjLqFQyi2hvqSyoe7c0=
+github.com/avanha/pmaas-spi v0.0.18 h1:ubJwqdBrypNcjeyF57DXCbZr/zGyjawsUhpqiwGFqF0=
+github.com/avanha/pmaas-spi v0.0.18/go.mod h1:vKV8Ke5QXei42A4agIgxypbznjLqFQyi2hvqSyoe7c0=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/google/uuid v1.6.0 h1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0=
