@@ -17,7 +17,7 @@ require (
 	github.com/avanha/pmaas-plugin-gotexttemplate v0.0.6
 	github.com/avanha/pmaas-plugin-hetunnelbroker v0.0.6
 	github.com/avanha/pmaas-plugin-netmon v0.0.11
-	github.com/avanha/pmaas-plugin-porkbun v0.0.9
+	github.com/avanha/pmaas-plugin-porkbun v0.0.10
 	github.com/avanha/pmaas-spi v0.0.21
 )
 
