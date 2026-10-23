@@ -28,8 +28,8 @@ github.com/avanha/pmaas-plugin-hetunnelbroker v0.0.6 h1:iYECVZIJ4ziY9YWEak6fR4N/
 github.com/avanha/pmaas-plugin-hetunnelbroker v0.0.6/go.mod h1:uMEmpwo3VOvH7CcMwOBzSN/3g8W139010yYavROqJIw=
 github.com/avanha/pmaas-plugin-netmon v0.0.11 h1:4NkIz3wG2aIUGanh3wWSXo4DD+qbGAloUG47We4+ao4=
 github.com/avanha/pmaas-plugin-netmon v0.0.11/go.mod h1:Hhs3M3fAhm7pNzajg/NyG/b6AZCtU8rE5eZlY3DyoP8=
-github.com/avanha/pmaas-plugin-porkbun v0.0.11 h1:4yx3LDVUewEu/DVGFqLy9fbwsEP/HzZfGvNPtJZKFcI=
-github.com/avanha/pmaas-plugin-porkbun v0.0.11/go.mod h1:ccMynNzu3rx/5DThhOReojENfqwyioAdEzP4ZpTaqpY=
+github.com/avanha/pmaas-plugin-porkbun v0.0.12 h1:rcLAhCBoQZYB4CDsVZFxvg6pD1OXCMElHhoOKLOexh0=
+github.com/avanha/pmaas-plugin-porkbun v0.0.12/go.mod h1:ccMynNzu3rx/5DThhOReojENfqwyioAdEzP4ZpTaqpY=
 github.com/avanha/pmaas-spi v0.0.21 h1:dyBnGK9UQia1vRy+BluCiKOdkRJIo9XHN9APbloYruo=
 github.com/avanha/pmaas-spi v0.0.21/go.mod h1:vKV8Ke5QXei42A4agIgxypbznjLqFQyi2hvqSyoe7c0=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
