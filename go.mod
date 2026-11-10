@@ -12,7 +12,7 @@ require (
 	github.com/avanha/pmaas-plugin-basicwebui v0.0.13
 	github.com/avanha/pmaas-plugin-bluetooth v0.0.14
 	github.com/avanha/pmaas-plugin-dblog v0.0.6
-	github.com/avanha/pmaas-plugin-environment v0.0.10
+	github.com/avanha/pmaas-plugin-environment v0.0.11
 	github.com/avanha/pmaas-plugin-fakes v0.0.3
 	github.com/avanha/pmaas-plugin-gotexttemplate v0.0.6
 	github.com/avanha/pmaas-plugin-hetunnelbroker v0.0.6

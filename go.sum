@@ -22,6 +22,8 @@ github.com/avanha/pmaas-plugin-environment v0.0.9 h1:nm4hCfcN0Tj5VdWgvaVeocKnh9Z
 github.com/avanha/pmaas-plugin-environment v0.0.9/go.mod h1:cTGxkEx1MZXQcqnRDsfTMw7APShjJeS+LsEjMc9YrRM=
 github.com/avanha/pmaas-plugin-environment v0.0.10 h1:Lqs5LDTmY/tzmZ5ZzngJDHgSghcrU447KS3rcVifjxc=
 github.com/avanha/pmaas-plugin-environment v0.0.10/go.mod h1:cTGxkEx1MZXQcqnRDsfTMw7APShjJeS+LsEjMc9YrRM=
+github.com/avanha/pmaas-plugin-environment v0.0.11 h1:LBCIhUmJKCjLJkgcW20A5sxF0V2n3MLBcbUXEgag+o8=
+github.com/avanha/pmaas-plugin-environment v0.0.11/go.mod h1:cTGxkEx1MZXQcqnRDsfTMw7APShjJeS+LsEjMc9YrRM=
 github.com/avanha/pmaas-plugin-fakes v0.0.3 h1:KNuXYkDTLdRPNj/T9mW+tX9Ab7TSvOkEgyLeIRH3yR4=
 github.com/avanha/pmaas-plugin-fakes v0.0.3/go.mod h1:2jTokf42mBIOQgkOX4wUFEpY/8fpp3hO6eFJqddp5ag=
 github.com/avanha/pmaas-plugin-gotexttemplate v0.0.6 h1:M/0j1hmSZCtJHUpCGdpsipBkh/9A2l4jEuOdvXJtqCs=
